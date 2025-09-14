@@ -82,7 +82,7 @@ export const skills = [
       },
       {
         name: "Express.js",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
       },
       {
         name: "REST APIs",
@@ -124,7 +124,7 @@ export const skills = [
       },
       {
         name: "Kafka",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/apachekafka/apachekafka-original.svg"
+        image: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/apachekafka.svg"
       },
       {
         name: "ServiceNow", 
@@ -153,7 +153,7 @@ export const skills = [
       },
       {
         name: "NetBeans",
-        image: "https://img.icons8.com/color/48/000000/netbeans.png",
+        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/netbeans/netbeans-original.svg",
       },
       {
         name: "Postman",
@@ -161,7 +161,7 @@ export const skills = [
       },
       {
         name: "Maven",
-        image: "https://img.icons8.com/color/48/000000/maven-ios.png",
+        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/maven/maven-original.svg",
       },
       {
         name: "JWT",
@@ -178,65 +178,49 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
-    img: "https://cdn.worldvectorlogo.com/logos/northeastern-university.svg",
+    img: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMzIiIGZpbGw9IiMwMDczZTYiLz4KPHRleHQgeD0iMzIiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5OVTwvdGV4dD4KPC9zdmc+",
     role: "Senior Technical Program Assistant",
     company: "NU Student Temps, Northeastern University",
-    date: "Oct 2025 - Present",
-    desc: "Lead development and optimization of advanced recruitment automation systems, mentoring junior team members on technical implementation strategies. Architect scalable software solutions and system integrations to enhance cross-platform data synchronization between student information systems and recruitment workflows. Spearhead process improvement initiatives that resulted in 40% reduction in time-to-hire and improved operational efficiency across student employment operations. Design and implement comprehensive analytics dashboards and reporting tools for senior management, providing strategic insights on recruitment trends and performance metrics. Manage technical project roadmaps and coordinate with multiple stakeholders to deliver enterprise-level solutions for student employment operations.",
+    date: "Aug 2025 - Present",
+    desc: "Lead development and optimization of advanced recruitment automation systems...",
     skills: [
-      "Java",
-      "React.js",
-      "System Architecture",
-      "Process Improvement",
-      "Analytics Dashboards",
-      "Project Management",
-      "Team Leadership"
+      "Java", "React.js", "System Architecture", "Process Improvement", 
+      "Analytics Dashboards", "Project Management", "Team Leadership"
     ],
-    doc: "https://img.icons8.com/color/48/000000/certificate.png",
+    doc: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMzIiIGZpbGw9IiMwMDczZTYiLz4KPHRleHQgeD0iMzIiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5OVTwvdGV4dD4KPC9zdmc+",
   },
   {
     id: 1,
-    img: "https://cdn.worldvectorlogo.com/logos/northeastern-university.svg",
+    img: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMzIiIGZpbGw9IiMwMDczZTYiLz4KPHRleHQgeD0iMzIiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5OVTwvdGV4dD4KPC9zdmc+",
     role: "Technical Program Assistant",
-    company: "NU Student Temps, Northeastern University",
-    date: "Sep 2021 - Oct 2025",
-    desc: "Developed automated web applications using Java and React.js to group student talent pools and streamline recruitment workflows, improving efficiency and matching candidates with the right technical interviewers. Designed dashboards and structured workflows to optimize technical interview assignments, increasing recruiting efficiency by 25% within 5 months. Worked closely with the Student Employment Office, tracking issues, identifying process improvement opportunities, and providing innovative solutions. Contributed to enhancing social media engagement and brand identity by providing design inputs, including logo creation, and collaborating effectively with the team.",
+    company: "NU Student Temps, Northeastern University", 
+    date: "Apr 2025 - Jul 2025",
+    desc: "Developed automated web applications using Java and React.js...",
     skills: [
-      "Java",
-      "React.js",
-      "JavaScript",
-      "Dashboard Design",
-      "Process Improvement",
-      "Team Collaboration",
-      "Web Applications"
+      "Java", "React.js", "JavaScript", "Dashboard Design", 
+      "Process Improvement", "Team Collaboration", "Web Applications"
     ],
-    doc: "https://img.icons8.com/color/48/000000/certificate.png",
+    doc: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMzIiIGZpbGw9IiMwMDczZTYiLz4KPHRleHQgeD0iMzIiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5OVTwvdGV4dD4KPC9zdmc+",
   },
   {
     id: 2,
-    img: "https://cdn.worldvectorlogo.com/logos/tata-consultancy-services.svg",
+    img: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMzIiIGZpbGw9IiMwMDI0NmMiLz4KPHRleHQgeD0iMzIiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5UQ1M8L3RleHQ+Cjwvc3ZnPg==",
     role: "Senior Software Engineer",
     company: "Tata Consultancy Services",
-    date: "Jan 2021 - Dec 2024",
-    desc: "Developed scalable REST-based applications using Java, Spring Boot, and Angular for mobile transactions and enterprise collections systems, improving performance 27x and reliability. Modernized legacy batch processes with multithreading, reducing execution time by 50%. Automated recurring workflows, rating configurations, and reminder communications, saving $2M + $1.2M + $40K annually and reducing manual effort. Reduced monthly open tickets from 100+ to 20 by identifying recurring issues and implementing long-term system improvements. Designed and implemented front-end and back-end features, including microservices and APIs, contributing to enterprise digital transformation initiatives. Transitioned development projects to a DevOps model, generating additional revenue of €1M.",
+    date: "Jan 2021 - Dec 2024", 
+    desc: "Developed scalable REST-based applications using Java, Spring Boot, and Angular...",
     skills: [
-      "Java",
-      "Spring Boot",
-      "Angular",
-      "REST APIs",
-      "Microservices",
-      "Oracle",
-      "Multithreading",
-      "DevOps"
+      "Java", "Spring Boot", "Angular", "REST APIs", 
+      "Microservices", "Oracle", "Multithreading", "DevOps"
     ],
-    doc: "https://img.icons8.com/color/48/000000/certificate.png",
+    doc: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMzIiIGZpbGw9IiMwMDI0NmMiLz4KPHRleHQgeD0iMzIiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5UQ1M8L3RleHQ+Cjwvc3ZnPg==",
   }
 ];
 
 export const education = [
   {
     id: 0,
-    img: "https://cdn.worldvectorlogo.com/logos/northeastern-university.svg",
+    img: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMzIiIGZpbGw9IiNDQzAwMDAiLz4KPHRleHQgeD0iMzIiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5OVTwvdGV4dD4KPC9zdmc+",
     school: "Northeastern University",
     date: "Expected May 2027",
     grade: "4.0 GPA",
@@ -245,10 +229,10 @@ export const education = [
   },
   {
     id: 1,
-    img: "https://img.icons8.com/color/48/000000/university.png",
-    school: "BV Raju Institute of Technology, JNTU Hyderabad",
+    img: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMzIiIGZpbGw9IiMwMDQwODAiLz4KPHRleHQgeD0iMzIiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5CVlJJVDwvdGV4dD4KPC9zdmc+",
+    school: "BV Raju Institute of Technology, JNTU Hyberabad",
     date: "Apr 2011",
-    grade: "Bachelor's Degree",
+    grade: "Bachelor's Degree", 
     desc: "Completed Bachelor of Technology in Computer Science from Jawaharlal Nehru Technological University Hyderabad. Built a strong foundation in programming fundamentals, data structures, algorithms, software engineering principles, and computer science theory. This education provided the technical groundwork for my successful career progression in enterprise software development.",
     degree: "Bachelor of Technology - Computer Science",
   }
