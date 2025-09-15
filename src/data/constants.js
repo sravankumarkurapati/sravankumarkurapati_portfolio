@@ -9,7 +9,7 @@ export const Bio = {
  description: "A passionate developer with expertise in Java, Spring Boot, React, and enterprise technologies. Currently pursuing a Master's in Information Systems at Northeastern University with a 4.0 GPA.",
  github: "https://github.com/sravankumarkurapati",
   resume:
-    "https://docs.google.com/document/d/1JFM_w9gG_KFWS102STYHIYaud1QzwowgotkYlyzBRlk/edit?tab=t.0",
+    "https://drive.google.com/file/d/17K0a0WPjCvuBEUqqb823wFO5HmmLzRjH/view?usp=drive_link",
   linkedin: "https://www.linkedin.com/in/sravankumar-kurapati/",
   twitter: "",
  
