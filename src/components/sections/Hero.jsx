@@ -183,8 +183,9 @@ const Img = styled.img`
   height: 100%;
   max-width: 400px;
   max-height: 400px;
-  border: 2px solid ${({ theme }) => theme.primary};
-
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.2); /* light glow */
   @media (max-width: 640px) {
     max-width: 280px;
     max-height: 280px;
