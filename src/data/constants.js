@@ -2,17 +2,20 @@ export const Bio = {
   name: "Sravan Kumar",
   roles: [
     "Full Stack Developer",
-  "Software Engineer",
-  "Backend Developer", 
-  "Java Developer",
+    "Software Engineer",
+    "Backend Developer",
+    "Java Developer",
+    "AI/ML Engineer",
   ],
- description: "A passionate developer with expertise in Java, Spring Boot, React, and enterprise technologies. Currently pursuing a Master's in Information Systems at Northeastern University with a 4.0 GPA.",
- github: "https://github.com/sravankumarkurapati",
+  description:
+    "A passionate developer with expertise in Java, Spring Boot, React, and enterprise technologies. Currently pursuing a Master's in Information Systems at Northeastern University with a 4.0 GPA.",
+  github: "https://github.com/sravankumarkurapati",
   resume:
     "https://drive.google.com/file/d/17K0a0WPjCvuBEUqqb823wFO5HmmLzRjH/view?usp=drive_link",
   linkedin: "https://www.linkedin.com/in/sravankumar-kurapati/",
   twitter: "",
- 
+  // TODO: Replace with your actual LeetCode profile URL
+  leetcode: "https://leetcode.com/u/sravankumarkurapati/",
 };
 
 export const skills = [
@@ -21,36 +24,44 @@ export const skills = [
     skills: [
       {
         name: "React Js",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
       },
       {
         name: "Angular",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg",
       },
       {
         name: "Redux",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
       },
       {
         name: "TypeScript",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
       },
       {
         name: "JavaScript",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
       },
       {
         name: "HTML",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
       },
       {
         name: "CSS",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
       },
       {
         name: "Bootstrap",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg",
-      }
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg",
+      },
     ],
   },
   {
@@ -58,36 +69,42 @@ export const skills = [
     skills: [
       {
         name: "Java",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
       },
       {
         name: "Spring Boot",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg"
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg",
       },
       {
-        name: "Spring Security", 
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg"
+        name: "Spring Security",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg",
       },
       {
         name: "Spring Cloud",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg"
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg",
       },
       {
         name: "Hibernate",
-        image: "https://img.icons8.com/color/48/000000/hibernate.png"
+        image: "https://img.icons8.com/color/48/000000/hibernate.png",
       },
       {
         name: "Node.js",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg",
       },
       {
         name: "Express.js",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
       },
       {
         name: "REST APIs",
-        image: "https://img.icons8.com/dusk/64/000000/api.png"
-      }
+        image: "https://img.icons8.com/dusk/64/000000/api.png",
+      },
     ],
   },
   {
@@ -95,20 +112,23 @@ export const skills = [
     skills: [
       {
         name: "Oracle",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg"
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg",
       },
       {
         name: "MongoDB",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg",
       },
       {
-        name: "Couchbase", 
-        image: "https://img.icons8.com/color/48/000000/database.png"
+        name: "Couchbase",
+        image: "https://img.icons8.com/color/48/000000/database.png",
       },
       {
         name: "MySQL",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg",
-      }
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg",
+      },
     ],
   },
   {
@@ -116,24 +136,25 @@ export const skills = [
     skills: [
       {
         name: "OpenShift",
-        image: "https://img.icons8.com/color/48/000000/openshift.png"
+        image: "https://img.icons8.com/color/48/000000/openshift.png",
       },
       {
         name: "WebLogic",
-        image: "https://img.icons8.com/color/48/000000/oracle-logo.png"
+        image: "https://img.icons8.com/color/48/000000/oracle-logo.png",
       },
       {
         name: "Kafka",
-        image: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/apachekafka.svg"
+        image:
+          "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/apachekafka.svg",
       },
       {
-        name: "ServiceNow", 
-        image: "https://img.icons8.com/color/48/000000/service.png"
+        name: "ServiceNow",
+        image: "https://img.icons8.com/color/48/000000/service.png",
       },
       {
         name: "Microservices",
-        image: "https://img.icons8.com/color/48/000000/api-settings.png"
-      }
+        image: "https://img.icons8.com/color/48/000000/api-settings.png",
+      },
     ],
   },
   {
@@ -141,7 +162,8 @@ export const skills = [
     skills: [
       {
         name: "Git",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg",
       },
       {
         name: "GitHub",
@@ -149,11 +171,13 @@ export const skills = [
       },
       {
         name: "VS Code",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg",
       },
       {
         name: "NetBeans",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/netbeans/netbeans-original.svg",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/netbeans/netbeans-original.svg",
       },
       {
         name: "Postman",
@@ -161,7 +185,8 @@ export const skills = [
       },
       {
         name: "Maven",
-        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/maven/maven-original.svg",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/maven/maven-original.svg",
       },
       {
         name: "JWT",
@@ -170,9 +195,9 @@ export const skills = [
       {
         name: "Swagger",
         image: "https://img.icons8.com/color/48/000000/api.png",
-      }
+      },
     ],
-  }
+  },
 ];
 
 export const experiences = [
@@ -184,8 +209,13 @@ export const experiences = [
     date: "Aug 2025 - Present",
     desc: "Lead development and optimization of advanced recruitment automation systems...",
     skills: [
-      "Java", "React.js", "System Architecture", "Process Improvement", 
-      "Analytics Dashboards", "Project Management", "Team Leadership"
+      "Java",
+      "React.js",
+      "System Architecture",
+      "Process Improvement",
+      "Analytics Dashboards",
+      "Project Management",
+      "Team Leadership",
     ],
     doc: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMzIiIGZpbGw9IiMwMDczZTYiLz4KPHRleHQgeD0iMzIiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5OVTwvdGV4dD4KPC9zdmc+",
   },
@@ -193,12 +223,17 @@ export const experiences = [
     id: 1,
     img: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMzIiIGZpbGw9IiMwMDczZTYiLz4KPHRleHQgeD0iMzIiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5OVTwvdGV4dD4KPC9zdmc+",
     role: "Technical Program Assistant",
-    company: "NU Student Temps, Northeastern University", 
+    company: "NU Student Temps, Northeastern University",
     date: "Apr 2025 - Jul 2025",
     desc: "Developed automated web applications using Java and React.js...",
     skills: [
-      "Java", "React.js", "JavaScript", "Dashboard Design", 
-      "Process Improvement", "Team Collaboration", "Web Applications"
+      "Java",
+      "React.js",
+      "JavaScript",
+      "Dashboard Design",
+      "Process Improvement",
+      "Team Collaboration",
+      "Web Applications",
     ],
     doc: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMzIiIGZpbGw9IiMwMDczZTYiLz4KPHRleHQgeD0iMzIiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5OVTwvdGV4dD4KPC9zdmc+",
   },
@@ -207,14 +242,20 @@ export const experiences = [
     img: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMzIiIGZpbGw9IiMwMDI0NmMiLz4KPHRleHQgeD0iMzIiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5UQ1M8L3RleHQ+Cjwvc3ZnPg==",
     role: "Senior Software Engineer",
     company: "Tata Consultancy Services",
-    date: "Jan 2021 - Dec 2024", 
+    date: "Jan 2021 - Dec 2024",
     desc: "Developed scalable REST-based applications using Java, Spring Boot, and Angular...",
     skills: [
-      "Java", "Spring Boot", "Angular", "REST APIs", 
-      "Microservices", "Oracle", "Multithreading", "DevOps"
+      "Java",
+      "Spring Boot",
+      "Angular",
+      "REST APIs",
+      "Microservices",
+      "Oracle",
+      "Multithreading",
+      "DevOps",
     ],
     doc: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMzIiIGZpbGw9IiMwMDI0NmMiLz4KPHRleHQgeD0iMzIiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5UQ1M8L3RleHQ+Cjwvc3ZnPg==",
-  }
+  },
 ];
 
 export const education = [
@@ -232,10 +273,10 @@ export const education = [
     img: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMzIiIGZpbGw9IiMwMDQwODAiLz4KPHRleHQgeD0iMzIiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5CVlJJVDwvdGV4dD4KPC9zdmc+",
     school: "BV Raju Institute of Technology, JNTU Hyberabad",
     date: "Apr 2011",
-    grade: "Bachelor's Degree", 
+    grade: "Bachelor's Degree",
     desc: "Completed Bachelor of Technology in Computer Science from Jawaharlal Nehru Technological University Hyderabad. Built a strong foundation in programming fundamentals, data structures, algorithms, software engineering principles, and computer science theory. This education provided the technical groundwork for my successful career progression in enterprise software development.",
     degree: "Bachelor of Technology - Computer Science",
-  }
+  },
 ];
 
 export const projects = [
@@ -256,18 +297,20 @@ export const projects = [
       "Security Systems",
       "Desktop Application",
       "Analytics Dashboard",
-      "WorkQueue System"
+      "WorkQueue System",
     ],
-    category: "desktop app",
+    category: "backend",
     github: "https://github.com/sravankumarkurapati/INFO5100-Final-Project",
     webapp: "#", // Desktop application - no web link
+    // TODO: Add YouTube URL for this project
+    youtube: null,
     member: [
       {
         name: "Sravan Kumar Kurapati",
         img: "https://github.com/sravankumarkurapati.png",
         linkedin: "https://www.linkedin.com/in/sravankumar-kurapati/",
         github: "https://github.com/sravankumarkurapati/",
-      }
+      },
     ],
   },
   {
@@ -288,18 +331,20 @@ export const projects = [
       "Bootstrap",
       "Real-time Features",
       "Admin Dashboard",
-      "MERN Stack"
+      "MERN Stack",
     ],
-    category: "web app",
+    category: "full stack",
     github: "https://github.com/sravankumarkurapati/INFO6150_Final_Project",
-    webapp: "https://flavor-fusion-demo.netlify.app/", // Update with actual deployment link
+    webapp: "https://flavor-fusion-demo.netlify.app/", // TODO: Update with actual deployment link
+    // TODO: Add YouTube URL for this project
+    youtube: null,
     member: [
       {
         name: "Sravan Kumar Kurapati",
         img: "https://github.com/sravankumarkurapati.png",
         linkedin: "https://www.linkedin.com/in/sravankumar-kurapati/",
         github: "https://github.com/sravankumarkurapati/",
-      }
+      },
     ],
   },
   {
@@ -318,18 +363,20 @@ export const projects = [
       "Workflow Optimization",
       "System Integration",
       "Analytics",
-      "Performance Improvement"
+      "Performance Improvement",
     ],
-    category: "web app",
+    category: "full stack",
     github: "#", // This might be private/internal
     webapp: "#", // Internal system
+    // TODO: Add YouTube URL for this project
+    youtube: null,
     member: [
       {
         name: "Sravan Kumar Kurapati",
         img: "https://github.com/sravankumarkurapati.png",
         linkedin: "https://www.linkedin.com/in/sravankumar-kurapati/",
         github: "https://github.com/sravankumarkurapati/",
-      }
+      },
     ],
   },
   {
@@ -350,33 +397,28 @@ export const projects = [
       "Multithreading",
       "CI/CD",
       "Performance Optimization",
-      "Enterprise Systems"
+      "Enterprise Systems",
     ],
-    category: "enterprise app",
+    category: "backend",
     github: "#", // Enterprise/proprietary code
     webapp: "#", // Internal enterprise system
+    // TODO: Add YouTube URL for this project
+    youtube: null,
     member: [
       {
         name: "Sravan Kumar Kurapati",
         img: "https://github.com/sravankumarkurapati.png",
         linkedin: "https://www.linkedin.com/in/sravankumar-kurapati/",
         github: "https://github.com/sravankumarkurapati/",
-      }
+      },
     ],
-  }
+  },
 ];
 
-// Optional: Add project categories if you want filtering functionality
-export const projectCategories = [
-  "all",
-  "web app", 
-  "desktop app",
-  "enterprise app"
-];
+export const projectCategories = ["all", "backend", "full stack", "ai/ml"];
 
-// Optional: Update Bio to reflect your actual projects
 export const updatedBio = {
-  ...Bio, // Keep existing bio properties
-  description: "A passionate Full Stack Developer with expertise in Java, Spring Boot, React, and enterprise technologies. Currently pursuing a Master's in Information Systems at Northeastern University with a 4.0 GPA. Experienced in building scalable web applications, cybersecurity systems, and enterprise solutions that drive business value and improve operational efficiency."
+  ...Bio,
+  description:
+    "A passionate Full Stack Developer with expertise in Java, Spring Boot, React, and enterprise technologies. Currently pursuing a Master's in Information Systems at Northeastern University with a 4.0 GPA. Experienced in building scalable web applications, cybersecurity systems, and enterprise solutions that drive business value and improve operational efficiency.",
 };
-

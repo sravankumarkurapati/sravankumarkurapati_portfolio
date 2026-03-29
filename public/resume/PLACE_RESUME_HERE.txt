@@ -1,0 +1,17 @@
+RESUME SETUP INSTRUCTIONS
+=========================
+
+Place your resume PDF in this folder with the exact filename:
+
+  Sravan_Kurapati_Resume.pdf
+
+The file should be located at:
+  public/resume/Sravan_Kurapati_Resume.pdf
+
+Once placed:
+- The "Download Resume" button will trigger a direct PDF download.
+- The "Open in New Tab" button will open it for in-browser preview.
+- No code changes are needed — the buttons already point to this path.
+
+Also remember to update the LAST_UPDATED constant in:
+  src/components/sections/Resume.jsx
