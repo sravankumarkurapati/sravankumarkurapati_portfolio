@@ -1,7 +1,8 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Bio } from "../../data/constants";
 import { SiLeetcode } from "react-icons/si";
+import { StorageOutlined, LayersOutlined, PsychologyOutlined } from "@mui/icons-material";
 import Typewriter from "typewriter-effect";
 import HeroImg from "../../images/HeroImage.jpg";
 import HeroBgAnimation from "../HeroBgAnimation";
@@ -18,33 +19,32 @@ import StarCanvas from "../canvas/Stars";
 const domains = [
   {
     id: "backend",
-    icon: "⚙️",
+    Icon: StorageOutlined,
     label: "Backend Engineer",
-    color: "#854CE6",        // existing theme.primary purple
+    color: "#854CE6",
     glow: "rgba(133,76,230,0.35)",
     tagline: "Enterprise-scale systems built for performance",
-    techs: ["Java", "Spring Boot", "Microservices", "REST APIs", "Oracle"],
+    techs: ["Java", "Python", "Spring Boot", "Spring Cloud", "Node.js", "Express.js", "Microservices", "REST APIs", "Kafka", "Hibernate/JPA", "Docker", "Kubernetes", "AWS (EC2, S3, Lambda, RDS)", "CI/CD", "Oracle", "MongoDB", "Couchbase"],
     tab: "backend",
   },
   {
     id: "fullstack",
-    icon: "🌐",
+    Icon: LayersOutlined,
     label: "Full Stack Developer",
-    color: "#13ADC7",        // cyan — already used in HeroBgAnimation SVG
+    color: "#13ADC7",
     glow: "rgba(19,173,199,0.30)",
     tagline: "End-to-end web apps from database to UI",
-    techs: ["React", "Node.js", "Angular", "MongoDB", "TypeScript"],
+    techs: ["React.js", "Angular", "TypeScript", "JavaScript", "Node.js", "Express.js", "HTML/CSS", "REST APIs", "MongoDB", "JWT", "Axios", "React Bootstrap", "Figma", "Responsive Design"],
     tab: "full stack",
   },
   {
     id: "aiml",
-    icon: "🤖",
+    Icon: PsychologyOutlined,
     label: "AI / ML Engineer",
-    color: "#F46737",        // orange — already used in HeroBgAnimation SVG
+    color: "#F46737",
     glow: "rgba(244,103,55,0.30)",
-    tagline: "GenAI · LLMs · RAG pipelines · Agentic AI",
-    // TODO: Replace with real AI/ML skills once added to constants.js
-    techs: ["GenAI", "LLMs", "RAG", "Prompt Eng.", "Fine-tuning"],
+    tagline: "GenAI · LLMs · RAG Pipelines · Agentic AI",
+    techs: ["Python", "TensorFlow", "PyTorch", "LangChain", "CrewAI", "OpenAI API", "Hugging Face", "RAG Pipelines", "Agentic AI", "LLM Fine-tuning", "Prompt Engineering", "Vector Databases", "FastAPI", "AWS"],
     tab: "ai/ml",
   },
 ];
@@ -55,11 +55,11 @@ const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 20px 30px 36px;
+  padding: 16px 30px 18px;
   z-index: 1;
 
-  @media (max-width: 960px) { padding: 20px 16px 32px; }
-  @media (max-width: 640px) { padding: 16px 16px 28px; }
+  @media (max-width: 960px) { padding: 16px 16px 20px; }
+  @media (max-width: 640px) { padding: 12px 16px 16px; }
 
   clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
 `;
@@ -91,13 +91,15 @@ const HeroRightContainer = styled.div`
   width: 100%;
   order: 2;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
+  padding-right: 20px;
   @media (max-width: 960px) {
     order: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-right: 0;
     margin-bottom: 16px;
   }
   @media (max-width: 640px) { margin-bottom: 10px; }
@@ -105,36 +107,36 @@ const HeroRightContainer = styled.div`
 
 /* Greeting line above name */
 const Greeting = styled.div`
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   color: ${({ theme }) => theme.text_secondary};
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   @media (max-width: 960px) {
     text-align: center;
-    font-size: 17px;
+    font-size: 16px;
   }
 `;
 
 /* "Sravan Kumar" — clean bright white */
 const GradientName = styled.div`
-  font-size: 52px;
+  font-size: 46px;
   font-weight: 800;
   line-height: 1.08;
   letter-spacing: -1.5px;
   color: #ffffff;
 
   @media (max-width: 960px) {
-    font-size: 42px;
+    font-size: 38px;
     text-align: center;
   }
   @media (max-width: 640px) {
-    font-size: 34px;
+    font-size: 30px;
   }
 `;
 
 /* "Kurapati" — gradient fill, no stroke */
 const OutlineName = styled.div`
-  font-size: 52px;
+  font-size: 46px;
   font-weight: 800;
   line-height: 1.05;
   letter-spacing: -1.5px;
@@ -144,11 +146,11 @@ const OutlineName = styled.div`
   background-clip: text;
 
   @media (max-width: 960px) {
-    font-size: 42px;
+    font-size: 38px;
     text-align: center;
   }
   @media (max-width: 640px) {
-    font-size: 34px;
+    font-size: 30px;
   }
 `;
 
@@ -158,8 +160,8 @@ const NameUnderline = styled.div`
   height: 3px;
   border-radius: 4px;
   background: linear-gradient(90deg, #854ce6, #13adc7);
-  margin: 10px 0 16px;
-  @media (max-width: 960px) { margin: 10px auto 16px; }
+  margin: 6px 0 10px;
+  @media (max-width: 960px) { margin: 6px auto 10px; }
 `;
 
 /* Role / typewriter row */
@@ -185,16 +187,43 @@ const Span = styled.span`
   @media (max-width: 960px) { font-size: 18px; }
 `;
 
-const SubTitle = styled.div`
-  font-size: 16px;
-  line-height: 28px;
+const BioPoints = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   margin-bottom: 14px;
-  color: ${({ theme }) => theme.text_primary + 95};
   @media (max-width: 960px) {
-    text-align: center;
-    font-size: 14px;
-    line-height: 26px;
+    align-items: center;
   }
+`;
+
+const BioPoint = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: ${({ theme }) => theme.text_primary + "cc"};
+  @media (max-width: 960px) {
+    font-size: 13px;
+    max-width: 480px;
+    text-align: left;
+  }
+`;
+
+const BioAccent = styled.span`
+  flex-shrink: 0;
+  margin-top: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: ${({ color }) => color || "#854ce6"};
+  box-shadow: 0 0 6px ${({ color }) => color || "#854ce6"};
+`;
+
+const BioBold = styled.span`
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_primary};
 `;
 
 const ResumeButton = styled.a`
@@ -205,12 +234,12 @@ const ResumeButton = styled.a`
   width: 95%;
   max-width: 260px;
   text-align: center;
-  padding: 12px 0;
+  padding: 10px 0;
   background: linear-gradient(225deg, hsla(271,100%,50%,1) 0%, hsla(294,100%,50%,1) 100%);
   box-shadow: 20px 20px 60px #1f2634, -20px -20px 60px #1f2634;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 17px;
+  font-size: 16px;
   color: white;
   transition: all 0.4s ease-in-out;
   &:hover {
@@ -218,8 +247,8 @@ const ResumeButton = styled.a`
     box-shadow: 20px 20px 60px #1f2634;
   }
   @media (max-width: 640px) {
-    padding: 10px 0;
-    font-size: 15px;
+    padding: 8px 0;
+    font-size: 14px;
   }
 `;
 
@@ -228,7 +257,7 @@ const SocialRow = styled.div`
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin-top: 16px;
+  margin-top: 6px;
 `;
 
 const SocialItem = styled.div`
@@ -267,21 +296,53 @@ const SocialLink = styled.a`
   }
 `;
 
+const blink = keyframes`
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.15; }
+`;
+
+const ConnectHint = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_secondary};
+`;
+
+const Chevrons = styled.span`
+  display: inline-flex;
+  gap: 1px;
+
+  span {
+    color: #854ce6;
+    font-size: 13px;
+    font-weight: 700;
+    animation: ${blink} 1.2s ease-in-out infinite;
+  }
+  span:nth-child(1) { animation-delay: 0s; }
+  span:nth-child(2) { animation-delay: 0.2s; }
+  span:nth-child(3) { animation-delay: 0.4s; }
+  span:nth-child(4) { animation-delay: 0.6s; }
+`;
+
 const Img = styled.img`
   width: 100%;
   height: 100%;
-  max-width: 290px;
-  max-height: 290px;
+  max-width: 250px;
+  max-height: 250px;
   border: 0;
   border-radius: 0;
   box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.2);
   @media (max-width: 960px) {
-    max-width: 230px;
-    max-height: 230px;
-  }
-  @media (max-width: 640px) {
     max-width: 200px;
     max-height: 200px;
+  }
+  @media (max-width: 640px) {
+    max-width: 170px;
+    max-height: 170px;
   }
 `;
 
@@ -308,27 +369,30 @@ const HeroBg = styled.div`
 const DomainsSection = styled.div`
   display: flex;
   justify-content: center;
-  padding: 6px 30px 32px;
+  padding: 4px 30px 20px;
   position: relative;
   z-index: 1;
-  @media (max-width: 640px) { padding: 6px 16px 24px; }
+  @media (max-width: 640px) { padding: 4px 16px 16px; }
 `;
 
 const DomainsInner = styled.div`
   width: 100%;
   max-width: 1100px;
   display: flex;
+  align-items: stretch;
   gap: 24px;
   @media (max-width: 900px) {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 `;
 
 
 const DomainIcon = styled.div`
-  font-size: 32px;
-  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: ${({ color }) => color};
 `;
 
 const DomainLabel = styled.div`
@@ -347,20 +411,24 @@ const DomainTagline = styled.div`
 const TechRow = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 5px;
   margin-top: 2px;
+  align-content: flex-start;
 `;
 
 const TechPill = styled.span`
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 600;
   color: ${({ color }) => color};
-  background: ${({ color }) => color + "18"};
-  border: 1px solid ${({ color }) => color + "55"};
+  background: ${({ color }) => color + "15"};
+  border: 1px solid ${({ color }) => color + "44"};
   border-radius: 20px;
-  padding: 3px 9px;
+  padding: 3px 8px;
   letter-spacing: 0.02em;
+  white-space: nowrap;
+  line-height: 1.4;
 `;
+
 
 
 /* ─── Card container with float animation via inline style ─── */
@@ -429,7 +497,31 @@ const Hero = () => {
               </motion.div>
 
               <motion.div {...headContentAnimation}>
-                <SubTitle>{Bio.description}</SubTitle>
+                <BioPoints>
+                  <BioPoint>
+                    <BioAccent color="#854ce6" />
+                    <span>
+                      Expertise in <BioBold>Java, Applied AI/ML</BioBold> and <BioBold>Full Stack</BioBold> development
+                      with React &amp; Angular — backed by enterprise experience at{" "}
+                      <BioBold>Tata Consultancy Services</BioBold> across India and client-site work at{" "}
+                      <BioBold>Proximus, Belgium</BioBold>.
+                    </span>
+                  </BioPoint>
+                  <BioPoint>
+                    <BioAccent color="#13adc7" />
+                    <span>
+                      Consistently <BioBold>building &amp; deploying real-world projects</BioBold> every month —
+                      each with live links you can explore.
+                    </span>
+                  </BioPoint>
+                  <BioPoint>
+                    <BioAccent color="#f46737" />
+                    <span>
+                      Pursuing <BioBold>MS in Information Systems</BioBold> at{" "}
+                      <BioBold>Northeastern University</BioBold> · <BioBold>4.0 GPA</BioBold>.
+                    </span>
+                  </BioPoint>
+                </BioPoints>
               </motion.div>
 
               <ResumeButton href={Bio.resume} target="_blank">
@@ -442,6 +534,15 @@ const Hero = () => {
                 <Tilt>
                   <Img src={HeroImg} alt="Sravan Kumar Kurapati" />
                 </Tilt>
+                <ConnectHint>
+                  find me on
+                  <Chevrons>
+                    <span>›</span>
+                    <span>›</span>
+                    <span>›</span>
+                    <span>›</span>
+                  </Chevrons>
+                </ConnectHint>
                 <SocialRow>
                   <SocialItem>
                     <SocialLink
@@ -504,7 +605,7 @@ const Hero = () => {
               custom={i * 0.15}
               variants={floatVariants}
               animate="animate"
-              style={{ flex: 1, minWidth: 0 }}
+              style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column" }}
               /* fade-in on page load — NOT scroll-triggered, so cards are visible immediately */
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -519,14 +620,15 @@ const Hero = () => {
                   borderRadius: 16,
                   background: "rgba(17,25,40,0.75)",
                   border: `1.5px solid ${d.color}66`,
-                  padding: "20px 20px 16px",
+                  padding: "14px 18px 12px",
                   display: "flex",
                   flexDirection: "column",
-                  gap: 10,
+                  gap: 8,
                   cursor: "pointer",
                   position: "relative",
                   overflow: "hidden",
                   transition: "border-color 0.2s ease",
+                  flex: 1,
                 }}
                 whileHover={{
                   scale: 1.03,
@@ -550,15 +652,15 @@ const Hero = () => {
                   }}
                 />
 
-                <DomainIcon>{d.icon}</DomainIcon>
+                <DomainIcon color={d.color}>
+                  <d.Icon style={{ fontSize: 34 }} />
+                </DomainIcon>
                 <DomainLabel color={d.color}>{d.label}</DomainLabel>
                 <DomainTagline>{d.tagline}</DomainTagline>
 
                 <TechRow>
                   {d.techs.map((t) => (
-                    <TechPill key={t} color={d.color}>
-                      {t}
-                    </TechPill>
+                    <TechPill key={t} color={d.color}>{t}</TechPill>
                   ))}
                 </TechRow>
 

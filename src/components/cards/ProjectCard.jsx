@@ -1,6 +1,50 @@
 import React from "react";
 import styled from "styled-components";
 import { GitHub, OpenInNew, InfoOutlined } from "@mui/icons-material";
+import {
+  SiPython, SiTensorflow, SiFastapi, SiStreamlit, SiDocker,
+  SiAmazonaws, SiReact, SiNodedotjs, SiMongodb,
+  SiSpringboot, SiAngular, SiJavascript, SiTypescript,
+  SiGooglecolab, SiStripe, SiBootstrap, SiGit, SiMysql,
+  SiPostgresql, SiOracle, SiJira, SiRedis, SiGraphql,
+  SiNginx, SiGithubactions, SiAmazondynamodb, SiAmazons3,
+} from "react-icons/si";
+import { FaJava, FaAws } from "react-icons/fa";
+
+const TECH_ICONS = {
+  "Python": SiPython,
+  "TensorFlow": SiTensorflow,
+  "Keras": SiTensorflow,
+  "FastAPI": SiFastapi,
+  "Streamlit": SiStreamlit,
+  "Docker": SiDocker,
+  "AWS EC2": SiAmazonaws,
+  "AWS": FaAws,
+  "AWS DynamoDB": SiAmazondynamodb,
+  "AWS S3": SiAmazons3,
+  "AWS CloudFront": FaAws,
+  "Nginx": SiNginx,
+  "GitHub Actions": SiGithubactions,
+  "React": SiReact,
+  "React.js": SiReact,
+  "Node.js": SiNodedotjs,
+  "MongoDB": SiMongodb,
+  "Spring Boot": SiSpringboot,
+  "Angular": SiAngular,
+  "JavaScript": SiJavascript,
+  "TypeScript": SiTypescript,
+  "Google Colab": SiGooglecolab,
+  "Stripe Payment": SiStripe,
+  "Bootstrap": SiBootstrap,
+  "Git": SiGit,
+  "MySQL": SiMysql,
+  "PostgreSQL": SiPostgresql,
+  "Oracle": SiOracle,
+  "Jira": SiJira,
+  "Redis": SiRedis,
+  "GraphQL": SiGraphql,
+  "Java": FaJava,
+};
 
 /* ─── Styled Components ─── */
 
@@ -28,8 +72,9 @@ const Card = styled.div`
 const Image = styled.img`
   width: 100%;
   height: 180px;
-  background-color: ${({ theme }) => theme.white};
+  background-color: #0d0d1a;
   object-fit: cover;
+  object-position: center;
 `;
 
 const CardBody = styled.div`
@@ -102,6 +147,9 @@ const Tags = styled.div`
 `;
 
 const Tag = styled.span`
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   font-size: 11px;
   font-weight: 500;
   color: ${({ theme }) => theme.text_primary + "aa"};
@@ -177,7 +225,7 @@ const ProjectCard = ({ project, onViewDetails }) => {
   const hasWebapp = project.webapp && project.webapp !== "#";
 
   return (
-    <Card>
+    <Card onClick={() => onViewDetails(project)}>
       <Image src={project.image} alt={project.title} />
 
       <CardBody>
@@ -191,9 +239,15 @@ const ProjectCard = ({ project, onViewDetails }) => {
 
         {project.tags && project.tags.length > 0 && (
           <Tags>
-            {project.tags.slice(0, 4).map((tag, i) => (
-              <Tag key={i}>{tag}</Tag>
-            ))}
+            {project.tags.slice(0, 4).map((tag, i) => {
+              const Icon = TECH_ICONS[tag];
+              return (
+                <Tag key={i}>
+                  {Icon && <Icon size={11} />}
+                  {tag}
+                </Tag>
+              );
+            })}
             {project.tags.length > 4 && (
               <Tag>+{project.tags.length - 4} more</Tag>
             )}
@@ -210,6 +264,7 @@ const ProjectCard = ({ project, onViewDetails }) => {
           rel="noreferrer"
           disabled={!hasGithub}
           title={hasGithub ? "View code on GitHub" : "Private repository"}
+          onClick={(e) => e.stopPropagation()}
         >
           <GitHub style={{ fontSize: 15 }} />
           Code
@@ -220,13 +275,16 @@ const ProjectCard = ({ project, onViewDetails }) => {
           target={hasWebapp ? "_blank" : undefined}
           rel="noreferrer"
           disabled={!hasWebapp}
-          title={hasWebapp ? "Open live demo" : "No live demo available"}
+          title={hasWebapp ? "View live application" : "No live application available"}
+          onClick={(e) => e.stopPropagation()}
         >
           <OpenInNew style={{ fontSize: 15 }} />
-          Demo
+          Live
         </IconBtn>
 
-        <DetailsBtn onClick={() => onViewDetails(project)}>
+        <DetailsBtn
+          onClick={(e) => { e.stopPropagation(); onViewDetails(project); }}
+        >
           <InfoOutlined style={{ fontSize: 15 }} />
           Details
         </DetailsBtn>

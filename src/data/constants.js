@@ -1,17 +1,16 @@
 export const Bio = {
   name: "Sravan Kumar",
   roles: [
-    "Full Stack Developer",
-    "Software Engineer",
     "Backend Developer",
     "Java Developer",
     "AI/ML Engineer",
+    "Full Stack Developer",
   ],
   description:
-    "A passionate developer with expertise in Java, Spring Boot, React, and enterprise technologies. Currently pursuing a Master's in Information Systems at Northeastern University with a 4.0 GPA.",
+    "A passionate developer with expertise in Java, Applied AI/ML, and Full Stack development with React and Angular — backed by enterprise experience at Tata Consultancy Services across India and client-site work at Proximus, Belgium. Consistently building and deploying real-world projects every month, each with live links you can explore. Currently pursuing an MS in Information Systems at Northeastern University (4.0 GPA).",
   github: "https://github.com/sravankumarkurapati",
   resume:
-    "https://drive.google.com/file/d/17K0a0WPjCvuBEUqqb823wFO5HmmLzRjH/view?usp=drive_link",
+    "https://drive.google.com/file/d/1QJGoCVYpcSgr_AZ0aZ4onNFj00no6UG6/view?usp=drive_link",
   linkedin: "https://www.linkedin.com/in/sravankumar-kurapati/",
   twitter: "",
   // TODO: Replace with your actual LeetCode profile URL
@@ -198,6 +197,81 @@ export const skills = [
       },
     ],
   },
+  {
+    title: "AI / ML",
+    skills: [
+      {
+        name: "Python",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+      },
+      {
+        name: "TensorFlow",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/tensorflow/tensorflow-original.svg",
+      },
+      {
+        name: "PyTorch",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg",
+      },
+      {
+        name: "LangChain",
+        image:
+          "https://img.icons8.com/color/48/000000/artificial-intelligence.png",
+      },
+      {
+        name: "CrewAI",
+        image:
+          "https://img.icons8.com/color/48/000000/robot-2.png",
+      },
+      {
+        name: "OpenAI API",
+        image:
+          "https://img.icons8.com/color/48/chatgpt.png",
+      },
+      {
+        name: "Hugging Face",
+        image:
+          "https://img.icons8.com/emoji/48/hugging-face.png",
+      },
+      {
+        name: "RAG Pipelines",
+        image:
+          "https://img.icons8.com/color/48/flow-chart.png",
+      },
+      {
+        name: "Agentic AI",
+        image:
+          "https://img.icons8.com/color/48/000000/bot.png",
+      },
+      {
+        name: "LLM Fine-tuning",
+        image:
+          "https://img.icons8.com/color/48/000000/settings--v1.png",
+      },
+      {
+        name: "Prompt Engineering",
+        image:
+          "https://img.icons8.com/color/48/000000/source-code.png",
+      },
+      {
+        name: "Vector Databases",
+        image:
+          "https://img.icons8.com/color/48/000000/database.png",
+      },
+      {
+        name: "FastAPI",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/fastapi/fastapi-original.svg",
+      },
+      {
+        name: "AWS",
+        image:
+          "https://img.icons8.com/color/48/000000/amazon-web-services.png",
+      },
+    ],
+  },
 ];
 
 export const experiences = [
@@ -282,6 +356,140 @@ export const education = [
 export const projects = [
   {
     id: 0,
+    title: "EquityIQ — AI Stock Intelligence Platform",
+    date: "2025",
+    description:
+      "Developed a production-grade AI stock intelligence platform using a 5-agent CrewAI multi-agent system where specialized agents (News, Financials, Sentiment, Predictor, Critic) run in parallel to analyze any publicly traded stock and deliver a comprehensive BUY/HOLD/SELL verdict in under 90 seconds. Implemented Facebook Prophet time-series forecasting with custom RSI and MACD regressors for 7-day price prediction with confidence intervals — running entirely on CPU without GPU. Built a real-time market screener that ingests Yahoo Finance's live most-active and day-gainer feeds daily, scores 50+ stocks using a weighted algorithm, and surfaces the top 5 picks every weekday at 8:30 AM ET autonomously. Designed a FastAPI backend with two-level caching (in-memory RAM + AWS DynamoDB with 30-minute TTL) reducing redundant LLM calls by ~80%. Deployed on AWS EC2 using Docker multi-stage builds with Nginx reverse proxy, CloudFront CDN, DynamoDB persistence, and GitHub Actions CI/CD — total infrastructure cost $0/month on AWS free tier.",
+    image:
+      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&h=600&q=80",
+    tags: [
+      "Python",
+      "CrewAI",
+      "Llama 3.3 70B",
+      "FastAPI",
+      "Streamlit",
+      "Facebook Prophet",
+      "Docker",
+      "Nginx",
+      "AWS EC2",
+      "AWS DynamoDB",
+      "AWS S3",
+      "AWS CloudFront",
+      "GitHub Actions",
+      "yfinance",
+      "Multi-Agent AI",
+      "Agentic AI",
+      "REST API",
+    ],
+    category: "ai/ml",
+    categories: ["ai/ml", "full stack"],
+    github: "https://github.com/sravankumarkurapati/equityiq",
+    webapp: "https://d12l9wpsob12xr.cloudfront.net",
+    youtube: null,
+    disclaimer: "For informational and educational purposes only. Not financial advice.",
+    architectureComplex: [
+      {
+        id: "user",
+        label: null,
+        items: [{ label: "Browser / User", icon: "👤", color: "#6366f1" }],
+      },
+      {
+        id: "cdn",
+        label: null,
+        items: [{ label: "AWS CloudFront", sublabel: "HTTPS CDN", icon: "🌐", color: "#2563eb" }],
+      },
+      {
+        id: "compute",
+        label: "AWS EC2 t2.micro",
+        container: true,
+        items: [
+          { label: "Nginx", sublabel: "Reverse Proxy", icon: "🔀", color: "#16a34a" },
+          { label: "FastAPI :8000", sublabel: "Backend API", icon: "⚡", color: "#f46737" },
+          { label: "Streamlit :8501", sublabel: "Frontend UI", icon: "🖥️", color: "#13adc7" },
+        ],
+      },
+      {
+        id: "agents",
+        label: "CrewAI Multi-Agent System — Llama 3.3 70B",
+        container: true,
+        items: [
+          { label: "News Agent", icon: "📰", color: "#854ce6" },
+          { label: "Financials Agent", icon: "📊", color: "#854ce6" },
+          { label: "Sentiment Agent", icon: "💭", color: "#854ce6" },
+          { label: "Predictor Agent", icon: "🔮", color: "#854ce6" },
+          { label: "Critic Agent", icon: "⚖️", color: "#22c55e", highlight: true, sublabel: "BUY/HOLD/SELL" },
+        ],
+      },
+      {
+        id: "data",
+        label: "Data & Storage",
+        items: [
+          { label: "DynamoDB", icon: "🗄️", color: "#2563eb" },
+          { label: "AWS S3", icon: "🪣", color: "#2563eb" },
+          { label: "Groq API", icon: "🤖", color: "#854ce6" },
+          { label: "yfinance · SEC · NewsAPI", icon: "📡", color: "#13adc7" },
+        ],
+      },
+      {
+        id: "cron",
+        label: null,
+        items: [{ label: "EC2 Cron · 8:30 AM ET", sublabel: "Daily market screener → top 5 picks", icon: "⏰", color: "#f59e0b" }],
+      },
+    ],
+    member: [
+      {
+        name: "Sravan Kumar Kurapati",
+        img: "https://github.com/sravankumarkurapati.png",
+        linkedin: "https://www.linkedin.com/in/sravankumar-kurapati/",
+        github: "https://github.com/sravankumarkurapati/",
+      },
+    ],
+  },
+  {
+    id: 1,
+    title: "SentimentLens - Real-Time NLP Sentiment Analysis",
+    date: "2025",
+    description:
+      "Developed an end-to-end NLP sentiment analysis system using Keras LSTM deep learning, trained on 25,000 IMDB movie reviews to classify any review as positive or negative in real time. Implemented a complete ML pipeline covering tokenization, sequence padding, embedding layers, and LSTM sequence modeling with 1.3 million trainable parameters achieving 83.54% test accuracy on unseen data. Built a production-ready REST API using FastAPI serving real-time inference with confidence scoring, wrapped in an interactive Streamlit web frontend for live user interaction. Containerised the entire application stack with Docker and deployed on AWS EC2, making the application publicly accessible 24/7 with automated container restart on server reboot.",
+    image:
+      "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&h=600&q=80",
+    tags: [
+      "Python",
+      "TensorFlow",
+      "Keras",
+      "LSTM",
+      "FastAPI",
+      "Streamlit",
+      "Docker",
+      "AWS EC2",
+      "NLP",
+      "Deep Learning",
+      "REST API",
+    ],
+    category: "ai/ml",
+    categories: ["ai/ml", "backend"],
+    github: "https://github.com/sravankumarkurapati/AI/tree/main/SentimentLens",
+    webapp: "http://18.222.39.81:8501/",
+    youtube: null,
+    architecture: [
+      { label: "User Input", sublabel: "Review text", icon: "💬", color: "#854ce6" },
+      { label: "Streamlit", sublabel: "Frontend UI", icon: "🖥️", color: "#13adc7" },
+      { label: "FastAPI", sublabel: "REST API", icon: "⚡", color: "#f46737" },
+      { label: "LSTM Model", sublabel: "Keras / TF", icon: "🧠", color: "#854ce6" },
+      { label: "AWS EC2", sublabel: "Docker host", icon: "☁️", color: "#13adc7" },
+      { label: "Prediction", sublabel: "+ve / -ve", icon: "✅", color: "#22c55e" },
+    ],
+    member: [
+      {
+        name: "Sravan Kumar Kurapati",
+        img: "https://github.com/sravankumarkurapati.png",
+        linkedin: "https://www.linkedin.com/in/sravankumar-kurapati/",
+        github: "https://github.com/sravankumarkurapati/",
+      },
+    ],
+  },
+  {
+    id: 2,
     title: "CyberSentinel - Incident Reporting & Awareness System",
     date: "Jan 2025 - Apr 2025",
     description:
@@ -314,7 +522,7 @@ export const projects = [
     ],
   },
   {
-    id: 1,
+    id: 3,
     title: "Flavor Fusion - Food Ordering Platform",
     date: "May 2025 - Aug 2025",
     description:
@@ -348,7 +556,7 @@ export const projects = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     title: "Student Recruitment Automation System",
     date: "Apr 2025 - Present",
     description:
@@ -380,7 +588,7 @@ export const projects = [
     ],
   },
   {
-    id: 3,
+    id: 5,
     title: "Enterprise Collections System - TCS",
     date: "Jan 2023 - Dec 2024",
     description:

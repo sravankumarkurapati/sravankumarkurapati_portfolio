@@ -1,6 +1,50 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { CloseRounded, GitHub, OpenInNew } from "@mui/icons-material";
+import {
+  SiPython, SiTensorflow, SiFastapi, SiStreamlit, SiDocker,
+  SiAmazonaws, SiReact, SiNodedotjs, SiMongodb,
+  SiSpringboot, SiAngular, SiJavascript, SiTypescript,
+  SiGooglecolab, SiStripe, SiBootstrap, SiGit, SiMysql,
+  SiPostgresql, SiOracle, SiJira, SiRedis, SiGraphql,
+  SiNginx, SiGithubactions, SiAmazondynamodb, SiAmazons3,
+} from "react-icons/si";
+import { FaJava, FaAws } from "react-icons/fa";
+
+const TECH_ICONS = {
+  "Python": SiPython,
+  "TensorFlow": SiTensorflow,
+  "Keras": SiTensorflow,
+  "FastAPI": SiFastapi,
+  "Streamlit": SiStreamlit,
+  "Docker": SiDocker,
+  "AWS EC2": SiAmazonaws,
+  "AWS": FaAws,
+  "AWS DynamoDB": SiAmazondynamodb,
+  "AWS S3": SiAmazons3,
+  "AWS CloudFront": FaAws,
+  "Nginx": SiNginx,
+  "GitHub Actions": SiGithubactions,
+  "React": SiReact,
+  "React.js": SiReact,
+  "Node.js": SiNodedotjs,
+  "MongoDB": SiMongodb,
+  "Spring Boot": SiSpringboot,
+  "Angular": SiAngular,
+  "JavaScript": SiJavascript,
+  "TypeScript": SiTypescript,
+  "Google Colab": SiGooglecolab,
+  "Stripe Payment": SiStripe,
+  "Bootstrap": SiBootstrap,
+  "Git": SiGit,
+  "MySQL": SiMysql,
+  "PostgreSQL": SiPostgresql,
+  "Oracle": SiOracle,
+  "Jira": SiJira,
+  "Redis": SiRedis,
+  "GraphQL": SiGraphql,
+  "Java": FaJava,
+};
 
 /* ─── Styled Components ─── */
 
@@ -90,7 +134,8 @@ const DateText = styled.div`
 const ProjectImage = styled.img`
   width: 100%;
   height: 220px;
-  object-fit: cover;
+  object-fit: contain;
+  background: #0d0d1a;
   border-radius: 12px;
   margin-bottom: 24px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -116,17 +161,168 @@ const DescriptionText = styled.p`
 const TagRow = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
 `;
 
 const Tag = styled.span`
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   font-size: 13px;
   font-weight: 500;
   color: ${({ theme }) => theme.text_primary + "cc"};
   background: rgba(133, 76, 230, 0.12);
   border: 1px solid ${({ theme }) => theme.primary + "44"};
   border-radius: 8px;
-  padding: 5px 12px;
+  padding: 6px 12px;
+  svg { flex-shrink: 0; }
+`;
+
+/* ─── Architecture diagram ─── */
+
+const ArchFlow = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+  padding: 16px 14px;
+  background: rgba(10, 10, 24, 0.6);
+  border: 1px solid rgba(133, 76, 230, 0.2);
+  border-radius: 14px;
+`;
+
+const ArchStep = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  flex: 1;
+  min-width: 0;
+`;
+
+const ArchIconBox = styled.div`
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: ${({ color }) => color + "18"};
+  border: 1.5px solid ${({ color }) => color + "66"};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 0 8px ${({ color }) => color + "33"};
+`;
+
+const ArchLabel = styled.div`
+  font-size: 10px;
+  font-weight: 700;
+  color: ${({ theme }) => theme.text_primary};
+  text-align: center;
+  white-space: nowrap;
+`;
+
+const ArchSublabel = styled.div`
+  font-size: 9px;
+  color: ${({ theme }) => theme.text_secondary};
+  text-align: center;
+  line-height: 1.3;
+  padding: 0 2px;
+`;
+
+const ArchConnector = styled.div`
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 0 2px;
+`;
+
+/* ─── Complex layered architecture ─── */
+
+const ComplexArch = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 4px;
+  padding: 16px;
+  background: rgba(10,10,24,0.7);
+  border: 1px solid rgba(133,76,230,0.2);
+  border-radius: 14px;
+`;
+
+const ComplexLayer = styled.div`
+  border: ${({ container }) => container ? "1.5px dashed rgba(133,76,230,0.35)" : "none"};
+  border-radius: 10px;
+  padding: ${({ container }) => container ? "8px 10px 10px" : "0"};
+  position: relative;
+`;
+
+const ComplexLayerLabel = styled.div`
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #854ce6;
+  margin-bottom: 8px;
+`;
+
+const ComplexItems = styled.div`
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+`;
+
+const ComplexItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 8px 10px 6px;
+  border-radius: 8px;
+  background: ${({ color }) => color + "15"};
+  border: 1.5px solid ${({ highlight, color }) => highlight ? color : color + "55"};
+  flex: 1;
+  min-width: 70px;
+  max-width: 130px;
+  box-shadow: ${({ highlight, color }) => highlight ? `0 0 12px ${color}44` : "none"};
+`;
+
+const ComplexItemIcon = styled.div`
+  font-size: 16px;
+  line-height: 1;
+`;
+
+const ComplexItemLabel = styled.div`
+  font-size: 10px;
+  font-weight: 700;
+  color: ${({ theme }) => theme.text_primary};
+  text-align: center;
+  line-height: 1.3;
+`;
+
+const ComplexItemSub = styled.div`
+  font-size: 9px;
+  color: ${({ theme }) => theme.text_secondary};
+  text-align: center;
+  line-height: 1.2;
+`;
+
+const ComplexVArrow = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 4px 0;
+  svg { display: block; }
+`;
+
+const DisclaimerText = styled.p`
+  font-size: 11px;
+  color: ${({ theme }) => theme.text_secondary};
+  text-align: center;
+  margin: 16px 0 0;
+  opacity: 0.7;
+  font-style: italic;
 `;
 
 /* ─── YouTube slot ─── */
@@ -280,10 +476,76 @@ const ProjectModal = ({ project, onClose }) => {
             <>
               <SectionLabel>Tech Stack</SectionLabel>
               <TagRow>
-                {project.tags.map((tag, i) => (
-                  <Tag key={i}>{tag}</Tag>
-                ))}
+                {project.tags.map((tag, i) => {
+                  const Icon = TECH_ICONS[tag];
+                  return (
+                    <Tag key={i}>
+                      {Icon && <Icon size={15} />}
+                      {tag}
+                    </Tag>
+                  );
+                })}
               </TagRow>
+            </>
+          )}
+
+          {/* ── Architecture Diagram ── */}
+          {project.architecture && project.architecture.length > 0 && (
+            <>
+              <SectionLabel>Architecture Flow</SectionLabel>
+              <ArchFlow>
+                {project.architecture.map((step, i) => (
+                  <React.Fragment key={i}>
+                    <ArchStep>
+                      <ArchIconBox color={step.color}>{step.icon}</ArchIconBox>
+                      <ArchLabel>{step.label}</ArchLabel>
+                      {step.sublabel && <ArchSublabel>{step.sublabel}</ArchSublabel>}
+                    </ArchStep>
+                    {i < project.architecture.length - 1 && (
+                      <ArchConnector>
+                        <svg width="28" height="10" viewBox="0 0 28 10" fill="none">
+                          <line x1="0" y1="5" x2="19" y2="5" stroke="#854ce6" strokeWidth="1.5" strokeDasharray="2.5 2"/>
+                          <polyline points="15,1 23,5 15,9" stroke="#854ce6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                        </svg>
+                      </ArchConnector>
+                    )}
+                  </React.Fragment>
+                ))}
+              </ArchFlow>
+            </>
+          )}
+
+          {/* ── Complex Architecture ── */}
+          {project.architectureComplex && project.architectureComplex.length > 0 && (
+            <>
+              <SectionLabel>Architecture</SectionLabel>
+              <ComplexArch>
+                {project.architectureComplex.map((layer, li) => (
+                  <React.Fragment key={layer.id}>
+                    <ComplexLayer container={layer.container}>
+                      {layer.label && <ComplexLayerLabel>{layer.label}</ComplexLayerLabel>}
+                      <ComplexItems>
+                        {layer.items.map((item, ii) => (
+                          <ComplexItem key={ii} color={item.color || "#854ce6"} highlight={item.highlight}>
+                            <ComplexItemIcon>{item.icon}</ComplexItemIcon>
+                            <ComplexItemLabel>{item.label}</ComplexItemLabel>
+                            {item.sublabel && <ComplexItemSub>{item.sublabel}</ComplexItemSub>}
+                          </ComplexItem>
+                        ))}
+                      </ComplexItems>
+                    </ComplexLayer>
+                    {li < project.architectureComplex.length - 1 && (
+                      <ComplexVArrow>
+                        <svg width="12" height="18" viewBox="0 0 12 18" fill="none">
+                          <line x1="6" y1="0" x2="6" y2="11" stroke="#854ce6" strokeWidth="1.5" strokeDasharray="2.5 2"/>
+                          <polyline points="2,8 6,14 10,8" stroke="#854ce6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                        </svg>
+                      </ComplexVArrow>
+                    )}
+                  </React.Fragment>
+                ))}
+              </ComplexArch>
+              {project.disclaimer && <DisclaimerText>⚠️ {project.disclaimer}</DisclaimerText>}
             </>
           )}
 
@@ -335,12 +597,12 @@ const ProjectModal = ({ project, onClose }) => {
                 variant="secondary"
               >
                 <OpenInNew style={{ fontSize: 18 }} />
-                Live Demo
+                View Live App ↗
               </ActionBtn>
             ) : (
-              <DisabledBtn title="No live demo available">
+              <DisabledBtn title="No live application available">
                 <OpenInNew style={{ fontSize: 18 }} />
-                No Live Demo
+                Not Deployed
               </DisabledBtn>
             )}
           </ButtonRow>

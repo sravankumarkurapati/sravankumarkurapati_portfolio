@@ -10,6 +10,7 @@ const raw = {
   databases: skills.find((g) => g.title === "Databases")?.skills || [],
   enterprise: skills.find((g) => g.title === "Enterprise & Cloud")?.skills || [],
   tools: skills.find((g) => g.title === "Development Tools")?.skills || [],
+  aiml: skills.find((g) => g.title === "AI / ML")?.skills || [],
 };
 
 const skillGroups = [
@@ -29,11 +30,9 @@ const skillGroups = [
     skills: [...raw.enterprise, ...raw.tools],
   },
   {
-    // TODO: Add AI/ML skills (e.g. Python, TensorFlow, PyTorch, LangChain, OpenAI, RAG, fine-tuning)
     title: "AI / ML",
-    subtitle: "GenAI, LLMs, RAG, prompt engineering & model training",
-    skills: [],
-    isPlaceholder: true,
+    subtitle: "GenAI, LLMs, RAG pipelines, prompt engineering & model training",
+    skills: raw.aiml,
   },
 ];
 
@@ -106,9 +105,7 @@ const TiltWrapper = styled.div`
 const Skill = styled.div`
   height: 100%;
   background-color: rgba(17, 25, 40, 0.83);
-  border: 1px solid
-    ${({ isPlaceholder, theme }) =>
-      isPlaceholder ? theme.primary + "44" : "rgba(255, 255, 255, 0.125)"};
+  border: 1px solid rgba(255, 255, 255, 0.125);
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   border-radius: 16px;
   padding: 24px 28px;
@@ -186,43 +183,6 @@ const SkillImage = styled.img`
   object-fit: contain;
 `;
 
-/* ─── Placeholder (AI/ML) ─── */
-
-const PlaceholderBox = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  border: 1.5px dashed ${({ theme }) => theme.primary + "55"};
-  border-radius: 12px;
-  padding: 32px 16px;
-  background: ${({ theme }) => theme.primary + "06"};
-`;
-
-const PlaceholderIcon = styled.div`
-  font-size: 40px;
-`;
-
-const PlaceholderBadge = styled.div`
-  font-size: 11px;
-  font-weight: 700;
-  color: ${({ theme }) => theme.primary};
-  border: 1px solid ${({ theme }) => theme.primary + "88"};
-  border-radius: 20px;
-  padding: 3px 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-`;
-
-const PlaceholderText = styled.div`
-  font-size: 13px;
-  color: ${({ theme }) => theme.text_secondary};
-  text-align: center;
-  line-height: 1.7;
-  max-width: 280px;
-`;
 
 /* ─── Component ─── */
 
@@ -239,34 +199,21 @@ const Skills = () => {
           {skillGroups.map((group, index) => (
             <TiltWrapper key={`skill-group-${index}`}>
               <Tilt style={{ height: "100%" }}>
-                <Skill isPlaceholder={group.isPlaceholder}>
+                <Skill>
                   <SkillHeader>
                     <SkillTitle>{group.title}</SkillTitle>
                     <SkillSubtitle>{group.subtitle}</SkillSubtitle>
                     <Divider />
                   </SkillHeader>
 
-                  {group.isPlaceholder ? (
-                    <PlaceholderBox>
-                      <PlaceholderIcon>🤖</PlaceholderIcon>
-                      <PlaceholderBadge>Coming Soon</PlaceholderBadge>
-                      <PlaceholderText>
-                        AI/ML skills will be listed here.
-                        {/* TODO: Add AI/ML skills to constants.js under a new "AI / ML" category
-                            e.g. Python, TensorFlow, PyTorch, LangChain, OpenAI API, Hugging Face,
-                            RAG pipelines, fine-tuning, prompt engineering, vector databases */}
-                      </PlaceholderText>
-                    </PlaceholderBox>
-                  ) : (
-                    <SkillList>
-                      {group.skills.map((item, ix) => (
-                        <SkillItem key={`skill-item-${ix}`}>
-                          <SkillImage src={item.image} alt={item.name} />
-                          {item.name}
-                        </SkillItem>
-                      ))}
-                    </SkillList>
-                  )}
+                  <SkillList>
+                    {group.skills.map((item, ix) => (
+                      <SkillItem key={`skill-item-${ix}`}>
+                        <SkillImage src={item.image} alt={item.name} />
+                        {item.name}
+                      </SkillItem>
+                    ))}
+                  </SkillList>
                 </Skill>
               </Tilt>
             </TiltWrapper>

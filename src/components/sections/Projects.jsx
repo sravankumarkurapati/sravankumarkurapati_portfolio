@@ -155,7 +155,12 @@ const Projects = () => {
   const filtered =
     toggle === "all"
       ? projects
-      : projects.filter((p) => p.category === toggle);
+      : projects.filter((p) => {
+          const cats = p.categories ?? [p.category];
+          return cats.some(
+            (c) => c?.toLowerCase().trim() === toggle.toLowerCase().trim()
+          );
+        });
 
   return (
     <Container id="Projects">
@@ -180,7 +185,7 @@ const Projects = () => {
           ))}
         </ToggleButtonGroup>
 
-        <CardContainer>
+        <CardContainer key={toggle}>
           {filtered.length > 0 ? (
             filtered.map((project) => (
               <ProjectCard
