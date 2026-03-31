@@ -1,9 +1,8 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState, useEffect } from "react";
+import styled, { keyframes } from "styled-components";
 import { Bio } from "../../data/constants";
 import { LinkedIn, GitHub } from "@mui/icons-material";
 import { SiLeetcode } from "react-icons/si";
-// TODO: Add Bio.twitter, Bio.insta, Bio.facebook to constants.js if needed
 
 /* ─── Styled Components ─── */
 
@@ -92,6 +91,43 @@ const SocialMediaIcon = styled.a`
   }
 `;
 
+const pulse = keyframes`
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+`;
+
+const StatsRow = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 0.5rem;
+  padding: 10px 22px;
+  border: 1px solid rgba(133, 76, 230, 0.2);
+  border-radius: 50px;
+  background: rgba(133, 76, 230, 0.05);
+`;
+
+const PulseDot = styled.span`
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #854ce6;
+  display: inline-block;
+  animation: ${pulse} 2s ease-in-out infinite;
+`;
+
+const StatText = styled.span`
+  font-size: 13px;
+  color: ${({ theme }) => theme.text_secondary};
+`;
+
+const StatCount = styled.span`
+  font-size: 13px;
+  font-weight: 700;
+  color: ${({ theme }) => theme.primary};
+`;
+
 const Copyright = styled.p`
   margin-top: 1rem;
   font-size: 0.9rem;
@@ -102,6 +138,15 @@ const Copyright = styled.p`
 /* ─── Component ─── */
 
 const Footer = () => {
+  const [count, setCount] = useState(null);
+
+  useEffect(() => {
+    fetch("https://api.counterapi.dev/v1/sravankumarkurapati-portfolio/visits/up")
+      .then((r) => r.json())
+      .then((d) => { if (d?.count) setCount(d.count.toLocaleString()); })
+      .catch(() => {});
+  }, []);
+
   return (
     <FooterContainer>
       <FooterWrapper>
@@ -150,8 +195,13 @@ const Footer = () => {
               <SiLeetcode size={20} />
             </SocialMediaIcon>
           )}
-          {/* TODO: Add Bio.twitter, Bio.insta, Bio.facebook to constants.js to show more social icons */}
         </SocialMediaIcons>
+
+        <StatsRow>
+          <PulseDot />
+          <StatText>Total visits</StatText>
+          <StatCount>{count ?? "—"}</StatCount>
+        </StatsRow>
 
         <Copyright>
           &copy; {new Date().getFullYear()} Sravan Kumar Kurapati. All rights reserved.
