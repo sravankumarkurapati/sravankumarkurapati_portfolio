@@ -276,7 +276,9 @@ const Navbar = () => {
   return (
     <Nav scrolled={scrolled}>
       <NavbarContainer>
-        <NavLogo to="/">Sravan Kumar Kurapati</NavLogo>
+        <NavLogo to="/" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
+          Sravan Kumar Kurapati
+        </NavLogo>
 
         {/* ── Hamburger ── */}
         <MobileIcon onClick={() => setIsOpen((prev) => !prev)}>
