@@ -1,15 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { FileDownloadRounded } from "@mui/icons-material";
 import { Bio } from "../../data/constants";
 
 /*
  * Resume preview uses Google Drive embed.
- * The drive share link in Bio.resume is automatically converted to an embed URL.
+ * Drive share links in Bio.resume / Bio.resumeAIML are auto-converted to embed URLs.
  *
- * TODO: Update this date when you update your resume
+ * TODO: Update these dates when you update your resumes
  */
-const LAST_UPDATED = "March 2026";
+const LAST_UPDATED_FULLSTACK = "March 2026";
+const LAST_UPDATED_AIML = "March 2026";
+
+const TABS = [
+  {
+    key: "fullstack",
+    label: "Java / Full Stack",
+    shareUrl: Bio.resume,
+    lastUpdated: LAST_UPDATED_FULLSTACK,
+    previewLabel: "Sravan Kumar Kurapati — Java & Full Stack Resume",
+  },
+  {
+    key: "aiml",
+    label: "AI / ML",
+    shareUrl: Bio.resumeAIML,
+    lastUpdated: LAST_UPDATED_AIML,
+    previewLabel: "Sravan Kumar Kurapati — AI / ML Resume",
+  },
+];
 
 // Converts a Google Drive share link to a direct embed URL
 const getDriveEmbedUrl = (shareUrl) => {
@@ -26,9 +44,6 @@ const getDriveDownloadUrl = (shareUrl) => {
     ? `https://drive.google.com/uc?export=download&id=${match[1]}`
     : shareUrl;
 };
-
-const embedUrl = getDriveEmbedUrl(Bio.resume);
-const downloadUrl = getDriveDownloadUrl(Bio.resume);
 
 /* ─── Styled Components ─── */
 
@@ -67,9 +82,43 @@ const Desc = styled.div`
   text-align: center;
   font-weight: 600;
   color: ${({ theme }) => theme.text_secondary};
-  margin-bottom: 24px;
+  margin-bottom: 8px;
   @media (max-width: 768px) {
     font-size: 16px;
+  }
+`;
+
+const TabRow = styled.div`
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 6px;
+`;
+
+const TabBtn = styled.button`
+  padding: 9px 28px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s ease-in-out;
+  ${({ active }) =>
+    active
+      ? `
+    background: linear-gradient(225deg, hsla(271,100%,50%,1) 0%, hsla(294,100%,50%,1) 100%);
+    color: white;
+    box-shadow: 0 4px 16px rgba(133, 76, 230, 0.4);
+  `
+      : `
+    background: transparent;
+    color: #b1b2b3;
+  `}
+  &:hover {
+    ${({ active }) => !active && `color: white;`}
   }
 `;
 
@@ -149,34 +198,48 @@ const LastUpdated = styled.div`
 /* ─── Component ─── */
 
 const Resume = () => {
+  const [activeTab, setActiveTab] = useState("fullstack");
+  const tab = TABS.find((t) => t.key === activeTab);
+  const embedUrl = getDriveEmbedUrl(tab.shareUrl);
+  const downloadUrl = getDriveDownloadUrl(tab.shareUrl);
+
   return (
     <Container id="Resume">
       <Wrapper>
         <Title>Resume</Title>
-        <Desc>My latest resume — preview below or download a copy</Desc>
+        <Desc>Choose a version to preview or download</Desc>
+
+        <TabRow>
+          {TABS.map((t) => (
+            <TabBtn
+              key={t.key}
+              active={activeTab === t.key}
+              onClick={() => setActiveTab(t.key)}
+            >
+              {t.label}
+            </TabBtn>
+          ))}
+        </TabRow>
 
         <PreviewCard>
           <PreviewToolbar>
-            <PreviewLabel>Sravan Kumar Kurapati — Resume</PreviewLabel>
-            <DownloadBtn
-              href={downloadUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <PreviewLabel>{tab.previewLabel}</PreviewLabel>
+            <DownloadBtn href={downloadUrl} target="_blank" rel="noreferrer">
               <FileDownloadRounded style={{ fontSize: 18 }} />
               Download Resume
             </DownloadBtn>
           </PreviewToolbar>
 
           <PreviewFrame
+            key={activeTab}
             src={embedUrl}
-            title="Sravan Kumar Kurapati Resume"
+            title={tab.previewLabel}
             allow="autoplay"
           />
         </PreviewCard>
 
-        {/* TODO: Update LAST_UPDATED constant at the top of this file */}
-        <LastUpdated>Last updated: {LAST_UPDATED}</LastUpdated>
+        {/* TODO: Update LAST_UPDATED constants at the top of this file */}
+        <LastUpdated>Last updated: {tab.lastUpdated}</LastUpdated>
       </Wrapper>
     </Container>
   );

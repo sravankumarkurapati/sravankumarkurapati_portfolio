@@ -4,15 +4,16 @@ import styled from "styled-components";
 // Actual company logos from assets
 import NULogo from "../../images/nu_student_temps_logo.jpg";
 import TCSLogo from "../../images/TCS_NewLogo_Final_RGB.jpg";
+import ProximusLogo from "../../images/proximus_logo.png";
 
 /* Map company name → actual logo image.
    Falls back to the base64 placeholder from constants.js if no match. */
 const getCompanyLogo = (company, fallback) => {
   if (!company) return fallback;
   if (company.toLowerCase().includes("northeastern")) return NULogo;
+  if (company.toLowerCase().includes("proximus")) return ProximusLogo;
   if (company.toLowerCase().includes("tata") || company.toLowerCase().includes("tcs"))
     return TCSLogo;
-  // TODO: Replace with actual logo <img> for other companies
   return fallback;
 };
 

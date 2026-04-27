@@ -10,7 +10,9 @@ export const Bio = {
     "A passionate developer with expertise in Java, Applied AI/ML, and Full Stack development with React and Angular — backed by enterprise experience at Tata Consultancy Services across India and client-site work at Proximus, Belgium. Consistently building and deploying real-world projects every month, each with live links you can explore. Currently pursuing an MS in Information Systems at Northeastern University (4.0 GPA).",
   github: "https://github.com/sravankumarkurapati",
   resume:
-    "https://drive.google.com/file/d/1QJGoCVYpcSgr_AZ0aZ4onNFj00no6UG6/view?usp=drive_link",
+    "https://drive.google.com/file/d/1qHiPCrtP7w0jtMgygPXUweiO3GsWmxBj/view?usp=sharing",
+  resumeAIML:
+    "https://drive.google.com/file/d/15Lq6UM-UGkfXETyhvvKUmfXDzY8h6cZt/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/sravankumar-kurapati/",
   twitter: "",
   // TODO: Replace with your actual LeetCode profile URL
@@ -314,19 +316,46 @@ export const experiences = [
   {
     id: 2,
     img: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMzIiIGZpbGw9IiMwMDI0NmMiLz4KPHRleHQgeD0iMzIiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5UQ1M8L3RleHQ+Cjwvc3ZnPg==",
-    role: "Senior Software Engineer",
-    company: "Tata Consultancy Services",
-    date: "Jan 2021 - Dec 2024",
-    desc: "Developed scalable REST-based applications using Java, Spring Boot, and Angular...",
+    role: "Senior Software Developer",
+    company: "Proximus (via TCS) · Brussels, Belgium",
+    date: "Dec 2018 - Dec 2024",
+    desc: "Directed the Proximus account as Delivery Manager, coordinating 5+ large-scale projects with strict timeline adherence. Developed scalable REST applications using Java, Spring Boot, and Angular, achieving 27x performance improvement and $2M annual savings. Modernized legacy batch processes with multithreading (50% execution time reduction), automated workflows saving $3.2M+ annually. Reduced monthly tickets from 100+ to 20, implemented CI/CD pipelines, transitioned projects to DevOps, generating $1M+ new revenue.",
     skills: [
       "Java",
       "Spring Boot",
       "Angular",
-      "REST APIs",
-      "Microservices",
       "Oracle",
+      "OpenShift",
+      "Couchbase",
+      "REST APIs",
       "Multithreading",
+      "Jenkins",
+      "Docker",
+      "SonarQube",
+      "CI/CD",
       "DevOps",
+      "Delivery Management",
+    ],
+    doc: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMzIiIGZpbGw9IiMwMDI0NmMiLz4KPHRleHQgeD0iMzIiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5UQ1M8L3RleHQ+Cjwvc3ZnPg==",
+  },
+  {
+    id: 3,
+    img: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMzIiIGZpbGw9IiMwMDI0NmMiLz4KPHRleHQgeD0iMzIiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5UQ1M8L3RleHQ+Cjwvc3ZnPg==",
+    role: "Software Developer",
+    company: "Tata Consultancy Services · Hyderabad, India",
+    date: "Dec 2011 - Dec 2018",
+    desc: "Designed the One AR collections system, served as CACS Application Analyst, and proposed automation generating $400K in new projects. Migrated 4 enterprise applications across Java version upgrades and Linux OS migrations on Red Hat Enterprise Linux, improving system performance by 30%. Architected and deployed 4 applications on AWS using Docker and Kubernetes, achieving 40% improvement in deployment efficiency.",
+    skills: [
+      "Java",
+      "Spring Boot",
+      "Oracle",
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "Red Hat Enterprise Linux",
+      "Application Migration",
+      "Collections Systems",
+      "Automation",
     ],
     doc: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMzIiIGZpbGw9IiMwMDI0NmMiLz4KPHRleHQgeD0iMzIiIHk9IjM4IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5UQ1M8L3RleHQ+Cjwvc3ZnPg==",
   },
@@ -589,28 +618,95 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Enterprise Collections System - TCS",
-    date: "Jan 2023 - Dec 2024",
+    title: "CACS – Computer Aided Collection System",
+    date: "Dec 2018 - Dec 2024",
     description:
-      "Developed scalable REST-based applications using Java, Spring Boot, and Angular for mobile transactions and enterprise collections systems, improving performance by 27x and enhancing reliability. Modernized legacy batch processes with multithreading, reducing execution time by 50%. Automated recurring workflows, rating configurations, and reminder communications, saving $2M + $1.2M + $40K annually. Implemented CI/CD pipelines for Java/Spring Boot applications, automating deployments and optimizing workflows to improve reliability and accelerate release cycles.",
+      "Built Java batch interfaces for the full collection lifecycle at Proximus, Belgium — covering overdue ingestion, deactivations, reactivations, SMS/email reminders, letter generation, and external agency handoffs. Developed Spring Boot service layers for collection status and promise-to-pay APIs, enabling real-time data sharing with downstream systems. Optimized legacy batch processes with Java multithreading, reducing execution times and improving throughput across the pipeline. Deployed on OpenShift with CI/CD using Jenkins, Docker, and SonarQube for automated builds, containerized deployments, and code quality gates.",
     image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=80",
     tags: [
       "Java",
       "Spring Boot",
-      "Angular",
-      "REST APIs",
-      "Microservices",
-      "Oracle Database",
-      "Multithreading",
+      "Oracle",
+      "OpenShift",
+      "Linux",
+      "Jenkins",
+      "Docker",
+      "SonarQube",
+      "Batch Processing",
       "CI/CD",
-      "Performance Optimization",
-      "Enterprise Systems",
+      "Multithreading",
+      "REST APIs",
     ],
     category: "backend",
-    github: "#", // Enterprise/proprietary code
+    github: "#", // Enterprise/proprietary — Proximus, Belgium
     webapp: "#", // Internal enterprise system
-    // TODO: Add YouTube URL for this project
+    youtube: null,
+    member: [
+      {
+        name: "Sravan Kumar Kurapati",
+        img: "https://github.com/sravankumarkurapati.png",
+        linkedin: "https://www.linkedin.com/in/sravankumar-kurapati/",
+        github: "https://github.com/sravankumarkurapati/",
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "RMCA-DEP – SAP RMCA Data & Services Platform",
+    date: "Feb 2022 - Dec 2024",
+    description:
+      "Built Java batch pipelines to ingest, migrate, and reconcile the full SAP RMCA customer feed into Couchbase at Proximus, Belgium, ensuring data integrity across the pipeline. Developed Spring Boot services to deliver real-time overdue and payment details to web and mobile apps, with stale-data flagging for pending SAP updates. Redesigned the legacy RMCA service achieving a 27x performance improvement (response time from 1–3s down to 27ms) via Couchbase-optimized data access patterns. Deployed on OpenShift with end-to-end CI/CD using Jenkins, Docker, and SonarQube for automated builds, containerized deployments, and code quality gates.",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
+    tags: [
+      "Java",
+      "Spring Boot",
+      "Couchbase",
+      "SAP",
+      "OpenShift",
+      "Docker",
+      "Jenkins",
+      "SonarQube",
+      "Linux",
+      "Batch Processing",
+      "CI/CD",
+      "REST APIs",
+      "Performance Optimization",
+    ],
+    category: "backend",
+    github: "#", // Enterprise/proprietary — Proximus, Belgium
+    webapp: "#", // Internal enterprise system
+    youtube: null,
+    member: [
+      {
+        name: "Sravan Kumar Kurapati",
+        img: "https://github.com/sravankumarkurapati.png",
+        linkedin: "https://www.linkedin.com/in/sravankumar-kurapati/",
+        github: "https://github.com/sravankumarkurapati/",
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "BOL – BillOnline Agent Portal",
+    date: "Dec 2023 - Dec 2024",
+    description:
+      "Built an Angular frontend for Proximus call center agents to access customer fixed and mobile line details — including overdue amounts, payment info, collection status, invoice documents, and promise-to-pay entry — in a unified interface. Developed a FastAPI service layer to aggregate and serve customer billing and collection data from multiple backend systems to the Angular UI in real time.",
+    image:
+      "https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&w=1000&q=80",
+    tags: [
+      "Angular",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "REST APIs",
+      "Real-time Data",
+      "Enterprise UI",
+    ],
+    category: "full stack",
+    github: "#", // Enterprise/proprietary — Proximus, Belgium
+    webapp: "#", // Internal enterprise system
     youtube: null,
     member: [
       {
