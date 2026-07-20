@@ -9,7 +9,7 @@ import { Bio } from "../../data/constants";
  *
  * TODO: Update these dates when you update your resumes
  */
-const LAST_UPDATED_FULLSTACK = "March 2026";
+const LAST_UPDATED_FULLSTACK = "July 2026";
 const LAST_UPDATED_AIML = "March 2026";
 
 const TABS = [

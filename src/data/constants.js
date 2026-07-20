@@ -10,7 +10,7 @@ export const Bio = {
     "A passionate developer with expertise in Java, Applied AI/ML, and Full Stack development with React and Angular — backed by enterprise experience at Tata Consultancy Services across India and client-site work at Proximus, Belgium. Consistently building and deploying real-world projects every month, each with live links you can explore. Currently pursuing an MS in Information Systems at Northeastern University (4.0 GPA).",
   github: "https://github.com/sravankumarkurapati",
   resume:
-    "https://drive.google.com/file/d/1qHiPCrtP7w0jtMgygPXUweiO3GsWmxBj/view?usp=sharing",
+    "https://drive.google.com/file/d/1stYiQVwL3J-x62eO_DiYigYeStiqJNsi/view?usp=drive_link",
   resumeAIML:
     "https://drive.google.com/file/d/15Lq6UM-UGkfXETyhvvKUmfXDzY8h6cZt/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/sravankumar-kurapati/",

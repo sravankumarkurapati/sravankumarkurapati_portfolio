@@ -135,13 +135,28 @@ const Copyright = styled.p`
   text-align: center;
 `;
 
+/* ─── Config ───────────────────────────────────────────────────────────────
+ * Set up a free Firebase Realtime Database:
+ *   1. Go to https://console.firebase.google.com → create a project
+ *   2. Build → Realtime Database → Create database (start in test mode)
+ *   3. Copy the database URL (e.g. https://my-project-default-rtdb.firebaseio.com)
+ *   4. Replace the placeholder below with your URL
+ * ─────────────────────────────────────────────────────────────────────────── */
+const FIREBASE_DB_URL = "https://YOUR-PROJECT-default-rtdb.firebaseio.com";
+
 /* ─── Component ─── */
 
 const Footer = () => {
   const [count, setCount] = useState(null);
 
   useEffect(() => {
-    fetch("https://api.counterapi.dev/v1/sravankumarkurapati-portfolio/visits/up")
+    if (!FIREBASE_DB_URL || FIREBASE_DB_URL.includes("YOUR-PROJECT")) return;
+
+    fetch(`${FIREBASE_DB_URL}/visitors.json`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ count: { ".sv": { increment: 1 } } }),
+    })
       .then((r) => r.json())
       .then((d) => { if (d?.count) setCount(d.count.toLocaleString()); })
       .catch(() => {});
